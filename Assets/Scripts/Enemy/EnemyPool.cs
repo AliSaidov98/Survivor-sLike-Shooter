@@ -2,7 +2,7 @@ using Zenject;
 
 namespace Enemy
 {
-    public abstract class EnemyPool : MonoMemoryPool<Enemy>
+    public class EnemyPool : MonoMemoryPool<Enemy>
     {
         protected override void OnCreated(global::Enemy.Enemy item) => item.gameObject.SetActive(false);
         protected override void OnSpawned(global::Enemy.Enemy item) => item.gameObject.SetActive(true);
